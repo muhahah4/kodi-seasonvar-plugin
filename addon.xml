@@ -2,7 +2,7 @@
 <addon id="plugin.video.seasonvar.light" name="Seasonvar" version="0.2" provider-name="burgua">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
-    <import addon="xbmc.gui" version="5.9.0"/>
+    
   </requires>
   <extension point="xbmc.python.pluginsource" library="main.py">
     <provides>video</provides>
