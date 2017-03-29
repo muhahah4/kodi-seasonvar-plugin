@@ -31,12 +31,10 @@ def get_keyboard(default="", heading="", hidden=False):
         return unicode(keyboard.getText(), "utf-8")
     return default
 
-
 def index(page, name):
     html = SeasonvarWebOpener().get_html(page)
-    elem = re.findall('id": "(.*)", "serial": "(.*)" , "type": "html5", "secure": "(.*)"', html)[0]
-    id = elem[0]
-    secure = elem[2]
+    id = re.findall('var id = "(.*)"', html)[0]
+    secure = re.findall('var secureMark = "(.*)"', html)[0]
     print_playlist(id, secure, name)
 
 
